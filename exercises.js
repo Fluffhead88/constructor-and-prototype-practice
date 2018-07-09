@@ -48,7 +48,16 @@ var Dog = function(options) {
   }
 };
 
-
+var Human = function(options) {
+  var options = options || {};
+  this.cool = options.cool || false;
+}
+Human.prototype.pet = function(dog) {
+  dog.status = "happy";
+}
+Human.prototype.feed = function(dog) {
+  dog.hungry = false;
+}
 
 
 
